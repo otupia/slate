@@ -18,7 +18,7 @@ search: true
     第一甩单接口列表
 
     <aside class="warning">
-        <b>今日IP： 10.20.83.42</b>
+        <b>今日IP： 10.20.88.20</b>
     </aside>
 
 
@@ -33,7 +33,7 @@ search: true
     httpClient = None
     try:
 
-        httpClient = httplib.HTTPConnection("<IP>", 8080, timeout=30)
+        httpClient = httplib.HTTPConnection("<IP>", 8000, timeout=30)
         httpClient.request("GET", "/checkmessage?key=1&format=json&sign=1111111111", "")
         response = httpClient.getresponse()
         print response.read()
@@ -66,7 +66,7 @@ search: true
 
 
 ### http 地址
-`GET http://<IP>:8080/checkmessage?key=1&format=json&sign=1111111111`
+`GET http://<IP>:8000/checkmessage?key=1&format=json&sign=1111111111`
 
 ### 参数说明
 参数名称 | 是否必须 | 说明 | 示例
@@ -94,7 +94,7 @@ try:
         })
     headers = {"Content-type": "application/x-www-form-urlencoded"
                     , "Accept": "application/json"}
-    httpClient = httplib.HTTPConnection(IP, 8080, timeout=30)
+    httpClient = httplib.HTTPConnection(IP, 8000, timeout=30)
     httpClient.request("POST", "/register", params, headers)
     response = httpClient.getresponse()
     print response.read()
@@ -126,7 +126,7 @@ finally:
 提交信贷员注册信息
 
 ### http 地址
-`POST http://<IP>:8080/register`
+`POST http://<IP>:8000/register`
 
 ### 参数说明
 参数名称 | 是否必须 | 说明 | 示例
@@ -142,7 +142,7 @@ sign | Y | 签名 | "1111111111"
 注意：
 <ul>
     <li>现阶段签名未校验</li>
-    <li>在短信不能发送阶段,可以访问 http://10.20.83.42:8080/session?key=KEY 获得session内的值</li>
+    <li>在短信不能发送阶段,可以访问 http://10.20.83.42:8000/session?key=KEY 获得session内的值</li>
 </ul>
 </aside>
 
@@ -161,7 +161,7 @@ try:
         })
     headers = {"Content-type": "application/x-www-form-urlencoded"
                     , "Accept": "application/json"}
-    httpClient = httplib.HTTPConnection(IP, 8080, timeout=30)
+    httpClient = httplib.HTTPConnection(IP, 8000, timeout=30)
     httpClient.request("POST", "/login", params, headers)
     response = httpClient.getresponse()
     print response.read()
@@ -194,7 +194,7 @@ finally:
 提交信贷员注册信息
 
 ### http 地址
-`POST http://<IP>:8080/register`
+`POST http://<IP>:8000/register`
 
 ### 参数说明
 参数名称 | 是否必须 | 说明 | 示例
@@ -210,7 +210,7 @@ sign | Y | 签名 | "1111111111"
 注意：
 <ul>
     <li>现阶段签名未校验</li>
-    <li>在短信不能发送阶段,可以访问 http://10.20.83.42:8080/session?key=KEY 获得session内的值</li>
+    <li>在短信不能发送阶段,可以访问 http://10.20.83.42:8000/session?key=KEY 获得session内的值</li>
 </ul>
 </aside>
 # 甩单相关接口
@@ -226,7 +226,7 @@ try:
         })
     headers = {"Content-type": "application/x-www-form-urlencoded"
                     , "Accept": "application/json"}
-    httpClient = httplib.HTTPConnection(IP, 8080, timeout=30)
+    httpClient = httplib.HTTPConnection(IP, 8000, timeout=30)
     httpClient.request("POST", "/login", params, headers)
     response = httpClient.getresponse()
     print response.read()
@@ -258,7 +258,7 @@ finally:
 提交信贷员注册信息
 
 ### http 地址
-`POST http://<IP>:8080/loanrequest/`
+`POST http://<IP>:8000/loanrequest/`
 
 ### 参数说明
 参数名称 | 是否必须 | 说明 | 示例
